@@ -1,0 +1,13 @@
+<div class="p-inputgroup">
+  <input
+    pInputText
+    type="text"
+    placeholder="Search..."
+    [formControl]="searchControl"
+    (keydown.enter)="onSearch()"
+  />
+  <span class="p-inputgroup-addon" [class.disabled]="!searchControl.value?.trim()">
+    <i class="pi pi-search" (click)="searchControl.value?.trim() && onSearch()"></i>
+  </span>
+</div>
+

@@ -1,0 +1,33 @@
+.p-inputgroup {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+
+input {
+  width: 100%;
+  background-color: #2f2f2f;
+  color: #b4b4b4;
+  border-radius: 26px;
+  padding: 0.6rem;
+  display: flex;
+  height: 50px;
+}
+
+.p-inputgroup-addon {
+  border-radius: 50%;
+  position: absolute;
+  left: 91%;
+  top: 18%;
+  cursor: pointer;
+}
+
+.pi-search {
+  color: #171717;
+}
+
+.p-inputgroup-addon.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
