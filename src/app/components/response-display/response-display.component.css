@@ -1,0 +1,22 @@
+.response-container {
+  width: 50rem;
+  height: 25rem;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  margin-top: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+p-skeleton .p-skeleton {
+  background-color: unset !important;
+}
+
+@media (max-width: 768px) {
+  .response-container {
+    width: 100%;
+  }
+}

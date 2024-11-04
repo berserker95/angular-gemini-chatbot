@@ -1,0 +1,11 @@
+<div class="response-container">
+  <div *ngIf="isLoading">
+    <p-skeleton width="24rem" styleClass="mb-2" />
+    <p-skeleton width="18rem" styleClass="mb-2" />
+    <p-skeleton height="4rem" styleClass="mb-2" />
+    <p-skeleton width="16rem" height="6rem" styleClass="mb-2" />
+  </div>
+  <div *ngIf="!isLoading && generatedResponse">
+    <p>{{ generatedResponse }}</p>
+  </div>
+</div>

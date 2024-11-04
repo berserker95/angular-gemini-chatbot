@@ -16,10 +16,9 @@ export class SearchBarComponent {
   searchControl = new FormControl('');
   geminiChatService: GeminiChatService = inject(GeminiChatService);
 
-  onSearch(): void {
-    const trimmedQuery = this.searchControl.value?.trim();
-    if (trimmedQuery) {
-      this.geminiChatService.generateText(trimmedQuery);
-    }
+  onSearch(query: string): void {
+    const searchQuery = query.trim();
+    this.geminiChatService.generateText(searchQuery);
+    this.searchControl.setValue("");
   }
 }
