@@ -10,3 +10,9 @@
     color: #b4b4b4;
   }
 }
+
+@media (max-width: 768px) {
+  app-response-display {
+    width: 100%;
+  }
+}

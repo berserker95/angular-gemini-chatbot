@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from "@google/generative-ai";
+import { Subject } from 'rxjs';
 
 import { environment } from '../../environments/environment';
 
@@ -21,6 +22,10 @@ interface SafetySetting {
 })
 export class GeminiChatService {
   private generativeAI: GoogleGenerativeAI;
+  private generatedTextSubject = new Subject<string>();
+  private loadingSubject = new Subject<boolean>();
+  public generatedText$ = this.generatedTextSubject.asObservable();
+  public loading$ = this.loadingSubject.asObservable();
   private generationConfig: GenerationConfig = {
     safetySettings: [
       {
@@ -41,6 +46,7 @@ export class GeminiChatService {
   }
 
   async generateText(prompt: string): Promise<void> {
+    this.loadingSubject.next(true);
     try {
       const model = this.generativeAI.getGenerativeModel({
         model: 'gemini-pro',
@@ -49,10 +55,12 @@ export class GeminiChatService {
       const result = await model.generateContent(prompt);
       const response = await result.response;
       const text = response.text();
-      window.alert(text);
+      this.generatedTextSubject.next(text);
     } catch (error) {
       console.error('Error generating text:', error);
-
+      this.generatedTextSubject.next('Error generating response.');
+    } finally {
+      this.loadingSubject.next(false);
     }
   }
 }
