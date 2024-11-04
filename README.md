@@ -9,6 +9,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## 🚀 Getting Started
 
+### Prerequisites
+
+To use the application, you need a Google Gemini API key. Follow the instructions in the [Google Gemini API documentation](https://ai.google.dev/gemini-api/docs/api-key?hl=it) to obtain an API key. 
+
+Add the API key to your environment file:
+
+```typescript
+// environment.ts
+export const environment = {
+  production: false,
+  API_KEY: 'YOUR_API_KEY_HERE'
+};
+```
+
 ### Development Server
 
 Run the following command to start a local development server:
@@ -93,4 +107,3 @@ Or visit the [Angular CLI Overview and Command Reference](https://angular.dev/to
 ---
 
 Feel free to contribute, report issues, or suggest new features to improve this project!
-
