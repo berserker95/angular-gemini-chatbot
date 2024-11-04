@@ -1,27 +1,96 @@
-# AngularGeminiChatbot
+
+# 🌐 AngularGeminiChatbot
+
+> **An Angular application integrated with Google Gemini for intelligent search functionality.**
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Getting Started
 
-## Code scaffolding
+### Development Server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run the following command to start a local development server:
 
-## Build
+```bash
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Navigate to [http://localhost:4200](http://localhost:4200/). The app will automatically reload if any source files change.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📦 Code Scaffolding
 
-## Running end-to-end tests
+Easily generate new components, directives, services, and more with Angular CLI:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+ng generate component component-name
+```
 
-## Further help
+Or try any of the following:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+ng generate directive|pipe|service|class|guard|interface|enum|module
+```
+
+---
+
+## 🛠️ Build
+
+To build the project, run:
+
+```bash
+ng build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+---
+
+## 🧪 Running Tests
+
+### Unit Tests
+
+Run unit tests with [Karma](https://karma-runner.github.io):
+
+```bash
+ng test
+```
+
+### End-to-End Tests
+
+Run end-to-end tests with a testing platform of your choice:
+
+```bash
+ng e2e
+```
+
+> **Note**: To use this command, add a package that implements end-to-end testing capabilities.
+
+---
+
+## 📚 Further Help
+
+For more information on the Angular CLI, use:
+
+```bash
+ng help
+```
+
+Or visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli).
+
+---
+
+## 🌟 Key Features
+
+- **Angular Integration**: Powered by the Angular framework.
+- **Google Gemini Integration**: Utilizes Google Gemini for intelligent search functionality.
+- **Responsive Search Bar**: Adaptive design, suitable for different devices.
+- **Efficient Development Workflow**: Fast reloads with `ng serve` and straightforward code generation.
+
+---
+
+Feel free to contribute, report issues, or suggest new features to improve this project!
+
